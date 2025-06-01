@@ -1,0 +1,15 @@
+{
+    "machine": {
+        "DATA_PATH": "data/machine",
+        "COG_PATH_APPEND": "cogs",
+        "CORE_PATH_APPEND": "core",
+        "STORAGE_TYPE": "Postgres",
+        "STORAGE_DETAILS": {
+            "host": "dpg-d0u48gadbo4c73af9lv0-a.singapore-postgres.render.com",
+            "port": 5432,
+            "user": "portges",
+            "password": "UoUKhmNIVTUy3Mv3EKnePj5gXg5Aykmp",
+            "database": "portges"
+        }
+    }
+}

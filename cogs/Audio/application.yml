@@ -1,0 +1,102 @@
+lavalink:
+  plugins:
+  - dependency: dev.lavalink.youtube:youtube-plugin:1.13.1
+    repository: https://maven.lavalink.dev/releases
+  server:
+    bufferDurationMs: 400
+    frameBufferDurationMs: 1000
+    gc-warnings: true
+    password: youshallnotpass
+    playerUpdateInterval: 1
+    soundcloudSearchEnabled: true
+    sources:
+      bandcamp: true
+      http: true
+      local: true
+      soundcloud: true
+      twitch: true
+      vimeo: true
+      youtube: false
+    youtubePlaylistLoadLimit: 100
+    youtubeSearchEnabled: true
+logging:
+  file:
+    path: ./logs/
+  level:
+    lavalink: INFO
+    root: INFO
+  logback:
+    rollingpolicy:
+      max-history: 15
+      max-size: 10MB
+metrics:
+  prometheus:
+    enabled: false
+    endpoint: /metrics
+plugins:
+  youtube:
+    ANDROID_MUSIC:
+      playback: true
+      playlistLoading: false
+      searching: true
+      videoLoading: false
+    ANDROID_VR:
+      playback: false
+      playlistLoading: true
+      searching: true
+      videoLoading: false
+    IOS:
+      playback: true
+      playlistLoading: true
+      searching: true
+      videoLoading: false
+    MUSIC:
+      playback: false
+      playlistLoading: false
+      searching: true
+      videoLoading: false
+    MWEB:
+      playback: true
+      playlistLoading: true
+      searching: false
+      videoLoading: false
+    TV:
+      playback: true
+      playlistLoading: false
+      searching: false
+      videoLoading: false
+    TVHTML5EMBEDDED:
+      playback: true
+      playlistLoading: false
+      searching: false
+      videoLoading: false
+    WEB:
+      playback: true
+      playlistLoading: true
+      searching: false
+      videoLoading: false
+    WEBEMBEDDED:
+      playback: true
+      playlistLoading: false
+      searching: false
+      videoLoading: false
+    allowDirectPlaylistIds: true
+    allowDirectVideoIds: true
+    allowSearch: true
+    clients:
+    - MUSIC
+    - WEBEMBEDDED
+    - ANDROID_VR
+    - ANDROID_MUSIC
+    - TVHTML5EMBEDDED
+    - TV
+    - IOS
+    - WEB
+    - MWEB
+    enabled: true
+sentry:
+  dsn: ''
+  environment: ''
+server:
+  address: localhost
+  port: 2333
